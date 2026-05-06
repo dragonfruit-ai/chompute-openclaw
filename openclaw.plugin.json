@@ -1,0 +1,51 @@
+{
+  "id": "chompute",
+  "name": "Chompute",
+  "description": "Chompute Advanced provider for OpenClaw.",
+  "version": "0.1.0",
+  "providers": ["chompute"],
+  "autoEnableWhenConfiguredProviders": ["chompute"],
+  "modelSupport": {
+    "modelPatterns": ["^chompute-advanced$"]
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "chompute",
+        "authMethods": ["access-key"],
+        "envVars": ["CHOMPUTE_ACCESS_KEY"]
+      }
+    ],
+    "requiresRuntime": false
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "chompute",
+      "method": "access-key",
+      "choiceId": "chompute-access-key",
+      "choiceLabel": "Chompute Access Key",
+      "choiceHint": "Use a Chompute Access Key from chompute.ai/skills.",
+      "groupId": "chompute",
+      "groupLabel": "Chompute",
+      "groupHint": "Chompute inference through the OpenAI-compatible endpoint.",
+      "optionKey": "chomputeAccessKey",
+      "cliFlag": "--chompute-access-key",
+      "cliOption": "--chompute-access-key <key>",
+      "cliDescription": "Chompute Access Key",
+      "onboardingScopes": ["text-inference"]
+    }
+  ],
+  "uiHints": {
+    "accessKey": {
+      "label": "Chompute Access Key",
+      "help": "Sign up at https://chompute.ai/skills to get your Access Key.",
+      "placeholder": "dfak_...",
+      "sensitive": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

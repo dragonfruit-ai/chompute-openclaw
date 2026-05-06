@@ -1,0 +1,55 @@
+{
+  "name": "@dragonfruit-ai/openclaw-provider-chompute",
+  "version": "0.1.0",
+  "description": "OpenClaw provider plugin for Chompute Advanced.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src/index.ts",
+    "src/provider.ts",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "verify": "npm run typecheck && npm run test && npm run build"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "openclaw": "2026.5.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "openclaw": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ],
+    "providers": [
+      "chompute"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.5.4",
+      "minGatewayVersion": "2026.5.4"
+    },
+    "build": {
+      "openclawVersion": "2026.5.4",
+      "pluginSdkVersion": "2026.5.4"
+    }
+  }
+}
