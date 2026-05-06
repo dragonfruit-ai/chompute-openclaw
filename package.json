@@ -4,6 +4,25 @@
   "description": "OpenClaw provider plugin for Chompute Advanced.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonfruit-ai/chompute-openclaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dragonfruit-ai/chompute-openclaw/issues"
+  },
+  "homepage": "https://github.com/dragonfruit-ai/chompute-openclaw#readme",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "openclaw-provider",
+    "chompute",
+    "llm",
+    "inference"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "src/index.ts",
