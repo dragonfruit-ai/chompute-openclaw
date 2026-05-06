@@ -1,5 +1,5 @@
 {
-  "name": "@dragonfruit-ai/openclaw-provider-chompute",
+  "name": "@chompute/openclaw-provider-chompute",
   "version": "0.1.0",
   "description": "OpenClaw provider plugin for Chompute Advanced.",
   "type": "module",

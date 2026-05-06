@@ -103,7 +103,7 @@ This repository is the source for the Chompute OpenClaw provider. ClawHub/npm pu
 When this provider is published to ClawHub, the target install flow will be:
 
 ```bash
-openclaw plugins install clawhub:@dragonfruit-ai/openclaw-provider-chompute
+openclaw plugins install clawhub:@chompute/openclaw-provider-chompute
 openclaw onboard --auth-choice chompute-access-key
 openclaw gateway restart
 ```
